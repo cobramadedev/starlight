@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Starlight</title>
+    <meta name="description" content="Get started building your docs site with Starlight.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #9900ff, #cc66ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            max-width: 300px;
+            margin: 2rem auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #9900ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #aa33ff;
+            transform: translateY(-2px);
+        }
+
+        .btn-minimal {
+            background: transparent;
+            color: #9900ff;
+            border: 2px solid #9900ff;
+        }
+
+        .btn-minimal:hover {
+            background: rgba(153, 0, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            margin-top: 4rem;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(153, 0, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(153, 0, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(153, 0, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        .card a {
+            color: #9900ff;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to Starlight</h1>
+            <p class="tagline">Congrats on setting up a new Starlight project!</p>
+            
+            <div class="hero-image">
+                <img src="https://starlight.astro.build/houston.webp" alt="Houston mascot">
+            </div>
+
+            <div class="actions">
+                <a href="/guides/example/" class="btn btn-primary">
+                    Example Guide →
+                </a>
+                <a href="https://starlight.astro.build" class="btn btn-minimal" target="_blank" rel="noopener">
+                    Read the Starlight docs ↗
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Next steps</h2>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">✏️</div>
+                    <h3>Update content</h3>
+                    <p>Edit <code>src/content/docs/index.mdx</code> to see this page change.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3>Change page layout</h3>
+                    <p>Delete <code>template: splash</code> in <code>src/content/docs/index.mdx</code> to display a sidebar on this page.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>Add new content</h3>
+                    <p>Add Markdown or MDX files to <code>src/content/docs</code> to create new pages.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Configure your site</h3>
+                    <p>Edit your <code>sidebar</code> and other config in <code>astro.config.mjs</code>.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📖</div>
+                    <h3>Read the docs</h3>
+                    <p>Learn more in <a href="https://starlight.astro.build/" target="_blank" rel="noopener">the Starlight Docs</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
